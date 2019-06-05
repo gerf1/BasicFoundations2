@@ -1,0 +1,274 @@
+<html>
+<script>
+
+function makeItBig(array) {
+
+ for (var i = 0; i < array.length; i++) {
+
+  if (array[i] > 0) {
+   array[i] = 'big';
+  }
+ }
+ return array;
+}
+
+console.log(makeItBig([1, 5, 10, -3]));
+
+
+function PrintlowReturnHigh(array) {
+ var max = array[0];
+ var min = array[0];
+
+ var newArray = [];
+
+ for (var i = 0; i < array.length; i++) {
+
+  if (array[i] > max) {
+   max = array[i];
+  }
+
+  if (array[i] < min) {
+   min = array[i];
+  }
+
+
+ }
+ return [min , max];
+}
+
+console.log(PrintlowReturnHigh([1, -6, 8, 55]));
+
+
+
+function ReturnAnother(array) {
+ var newArray = [];
+ var flag = true;
+
+ for (var i = 1; i < array.length && flag == true; i++) {
+
+  if (array[i] % 2 != 0) {
+   newArray.push(array[i]);
+   flag = false;
+
+  }
+ }
+
+ for (var j = 1; j < array.length; j++) {
+
+ 
+  newArray.push(array[j]);
+
+ }
+
+
+ return newArray;
+}
+console.log(ReturnAnother([1, 5, 3, 3, 2, 2, 5, 4]));
+
+
+
+function Doublevision(array) {
+ var double = [];
+ for (var i = 0; i < array.length; i++) {
+
+  double.push(array[i] + array[i]);
+ }
+ return double;
+}
+
+console.log(Doublevision([1, 5, 10, 3]));
+
+
+
+function Countpositives(array) {
+ var count = 0;
+ for (var i = 0; i < array.length; i++) {
+  if (array[i] > 0) {
+
+   count++;
+  }
+
+ }
+ array[array.length - 1] = count;
+
+ return array;
+}
+
+console.log(Countpositives([1, 5, -10, 3]));
+
+
+
+function EvenandOdds(array) {
+ var countEven = 0;
+ var countOdd = 0;
+
+ for (var i = 0; i < array.length; i++) {
+  if (array[i] % 2 == 0) {
+   countEven = countEven + 1;
+
+  }
+
+
+  if (array[i] % 2 != 0) {
+   countOdd = countOdd + 1;
+  }
+ }
+ if (countEven >= 3) {
+  console.log("Even more so!");
+ }
+
+
+ if (countOdd >= 3) {
+  console.log("That's odd!");
+ }
+}
+
+EvenandOdds([1, 5, 3, 3, 2, 2, 2, 2]);
+
+
+
+function IncrementTheSeconds(array) {
+ newArray = [];
+
+ for (var i = 0; i < array.length; i++) {
+
+  newArray.push(array[i]);
+  if (array[i] % 2 != 0) {
+   newArray.push(1);
+
+  }
+ }
+ return newArray;
+}
+console.log(IncrementTheSeconds([1, 5, 3, 3, 2, 2, 5, 4]));
+
+
+function PreviousLenght(array) {
+ newArray = [];
+
+
+ newArray.push(array[0]);
+
+ for (var i = 0; i < array.length - 1; i++) {
+
+  newArray.push(array[i].length);
+ }
+ return newArray;
+}
+console.log(PreviousLenght(['hello', 'dojo', 'awesome']));
+
+
+
+function addSeven(array) {
+ var newArray = [];
+
+ for (var i = 0; i < array.length; i++) {
+
+  newArray.push(array[i] + 7);
+
+
+ }
+
+ return newArray;
+}
+
+console.log(addSeven([1, 5, 3, 3]));
+
+
+
+function reverse(array) {
+ var i = 0;
+ var j = array.length - 1;
+ while (i < j) {
+  var x = array[i];
+  array[i] = array[j];
+  array[j] = x;
+  i++;
+  j--;
+ }
+ return array;
+}
+
+console.log(reverse([1, 6, 2, 3]));
+
+
+
+function Negative(array) {
+ var newArray = [];
+
+ for (var i = 0; i < array.length; i++) {
+
+  if (array[i] < 0) {
+   newArray.push(array[i]);
+  } else {
+   newArray.push(array[i] * -1);
+  }
+ }
+
+ return Negative
+}
+
+console.log(addSeven([1, 5, -3, 3]));
+
+
+
+function AlwaysHungry(array) {
+ var count = 0;
+
+ for (var i = 0; i < array.length; i++) {
+
+  if (array[i] == 'food') {
+   count = count + 1;
+
+  }
+ }
+
+ if (count > 0) {
+
+  for (var j = 0; j < count; j++) {
+   console.log("yummy");
+  }
+ } else {
+  console.log("I'm hungry");
+
+ }
+
+
+
+}
+AlwaysHungry([1, 'food', 2, 4, 1]);
+
+
+
+function SwapValue(array) {
+
+ var temp = array[0];
+ console.log(temp);
+ console.log(array);
+ array[0] = array[array.length - 1];
+
+ array[array.length - 1] = temp;
+
+ return array;
+}
+
+console.log(SwapValue([1, 6, 2, 3]));
+
+
+
+
+function scaleArray(array, multiply) {
+ var newArray = [];
+ for (var i = 0; i < array.length; i++) {
+
+  newArray.push(array[i] * multiply)
+
+
+ }
+
+ return newArray;
+}
+console.log(scaleArray([1, 4, 5, 8], 5));
+
+</script>
+</html>
